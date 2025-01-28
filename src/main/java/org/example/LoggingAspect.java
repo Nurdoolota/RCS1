@@ -20,17 +20,17 @@ public class LoggingAspect {
         Object[] methodArgs = joinPoint.getArgs();
 
         // Логирование вызова метода с параметрами
-        System.out.println("вызываемый метод: " + methodName + " с параметрами: " + Arrays.toString(methodArgs));
+        log.info("вызываемый метод: " + methodName + " с параметрами: " + Arrays.toString(methodArgs));
         Object result = null;
         try {
             // Логирование метода
             result = joinPoint.proceed();
 
             // Логирование возвращаемого значения
-            System.out.println("метод " + methodName + " результат: " + result);
+            log.info("метод " + methodName + " результат: " + result);
         } catch (Throwable ex) {
             // Логирование исключения
-            System.out.println("метод " + methodName + " выбрасываемое исключение: " + ex);
+            log.info("метод " + methodName + " выбрасываемое исключение: " + ex);
             throw ex;
         }
 
