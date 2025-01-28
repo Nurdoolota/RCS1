@@ -11,7 +11,7 @@
    mvn clean package
     ```
    Maven создаст JAR-файл в директории target:
-   my-project-1.0-SNAPSHOT.jar — -файл с вашим приложением.
+   RCS1-1.0-SNAPSHOT.jar — -файл с вашим приложением.
 
 3. Запустите его командой
    ```bash
